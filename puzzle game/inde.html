@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sliding Puzzle Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="title">🧩 Sliding Puzzle Game</h1>
+
+    <div class="top-bar">
+      <div class="info-box">
+        <label>Difficulty:</label>
+        <select id="difficulty">
+          <option value="Easy">Easy (3x3)</option>
+          <option value="Medium">Medium (4x4)</option>
+          <option value="Hard">Hard (5x5)</option>
+        </select>
+      </div>
+
+      <div class="info-box">⏱ Time: <span id="time">0</span> sec</div>
+      <div class="info-box">🔁 Moves: <span id="moves">0</span></div>
+      <div class="info-box">⭐ Score: <span id="score">0</span></div>
+    </div>
+
+    <div id="board" class="board"></div>
+
+    <div class="controls">
+      <button id="restartBtn">Restart</button>
+      <button id="newGameBtn">New Game</button>
+      <button id="clearLeaderboardBtn">Clear Leaderboard</button>
+    </div>
+
+    <div class="leaderboard">
+      <h2>🏆 Leaderboard (Top 10)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Difficulty</th>
+            <th>Score</th>
+            <th>Time</th>
+            <th>Moves</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboardBody"></tbody>
+      </table>
+      <p id="noScoresText">No scores yet.</p>
+    </div>
+  </div>
+
+  <!-- Win Modal -->
+  <div id="winModal" class="modal-overlay hidden">
+    <div class="modal">
+      <h2>🎉 You Win!</h2>
+      <p>Time: <span id="finalTime"></span> sec</p>
+      <p>Moves: <span id="finalMoves"></span></p>
+      <p>Score: <span id="finalScore"></span></p>
+
+      <input id="playerName" type="text" placeholder="Enter your name" />
+
+      <button id="submitScoreBtn">Submit Score</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

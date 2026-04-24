@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.info-box {
+  background: #1e293b;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+select {
+  padding: 5px;
+  border-radius: 8px;
+  border: none;
+  margin-left: 5px;
+}
+
+.board {
+  display: grid;
+  gap: 8px;
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 15px;
+  width: fit-content;
+  margin: auto;
+}
+
+.tile {
+  width: 70px;
+  height: 70px;
+  background: #38bdf8;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #0f172a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.tile:hover {
+  transform: scale(1.05);
+}
+
+.empty {
+  background: transparent;
+  cursor: default;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  background: #22c55e;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.leaderboard {
+  margin-top: 30px;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.leaderboard h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #334155;
+}
+
+#noScoresText {
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0.7;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 15px;
+  width: 330px;
+  text-align: center;
+}
+
+.modal input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin: 12px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  .tile {
+    width: 55px;
+    height: 55px;
+    font-size: 18px;
+  }
+}
